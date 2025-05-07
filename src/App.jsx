@@ -1,32 +1,66 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './css/App.css'; //Se ha modificado la ruta para importarla.
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/App.css'; // Se ha modificado la ruta para importarla.
+/*Importaciones de las paginas creadas.*/
+import Home from './pages/Home';
+import Menu from './pages/Menu';
+import About from './pages/About';
+import Reservations from './pages/Reservations';
+import Contact from './pages/Contact';
 
 //Componente principal de la aplicación
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="container mt-5">
-      <div className="text-center">
-        <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
-        <img src={viteLogo} className="logo" alt="Vite logo" /></a>
-        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-primary my-4">¡Mi Proyecto Real!</h1>
-      <div className="card p-4 shadow">
-        <button className="btn btn-primary mb-3" onClick={() => setCount(count + 1)}>
-          Clics: {count}
+    <Router>
+      {/*Barra de navegación con Bootstrap*/}
+      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div className="container">
+          <Link className="navbar-brand" to="/">Sabor Salvadoreño y Mexicano</Link>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ms-auto">
+              <li className="nav-item">
+                <Link className="nav-link" to="/">Inicio</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/menu">Menú</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/about">Acerca de</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/reservations">Reservas</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact">Contacto</Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      {/*Definición de rutas*/}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      {/* Contador del ejemplo que viene predefinido al descargar Vite y React (Decidimos dejarlo para la prueba)*/}
+      <div className="text-center my-5">
+        <button onClick={() => setCount((count) => count + 1)} className="btn btn-secondary">
+          Clicks: {count}
         </button>
-        <p>
-          Edita <code>src/App.jsx</code> para ver los cambios en tiempo real.
-        </p>
       </div>
-    </div>
+    </Router>
   );
 }
 
