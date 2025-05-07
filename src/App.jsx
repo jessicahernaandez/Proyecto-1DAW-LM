@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './css/App.css'; // Se ha modificado la ruta para importarla.
+import './CSS/App.css'; // Se ha modificado la ruta para importarla.
 /*Importaciones de las paginas creadas.*/
 import Home from './pages/Home';
 import Menu from './pages/Menu';
