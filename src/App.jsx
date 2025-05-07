@@ -2,8 +2,9 @@
 import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
-import './App.css';
+import './css/App.css'; //Se ha modificado la ruta para importarla.
 
+//Componente principal de la aplicación
 function App() {
   const [count, setCount] = useState(0);
 
