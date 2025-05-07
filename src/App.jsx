@@ -15,7 +15,17 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
+
     <Router>
+      {/*Definición de rutas*/}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
       {/*Barra de navegación con Bootstrap*/}
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
         <div className="container">
@@ -44,15 +54,6 @@ function App() {
           </div>
         </div>
       </nav>
-
-      {/*Definición de rutas*/}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
 
       {/* Contador del ejemplo que viene predefinido al descargar Vite y React (Decidimos dejarlo para la prueba)*/}
       <div className="text-center my-5">
