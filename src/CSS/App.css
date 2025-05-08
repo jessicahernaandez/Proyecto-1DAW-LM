@@ -10,7 +10,7 @@
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #e74c3c; /*Color rojo*/
+  color: #e74c3c;
   margin-bottom: 50px;
   text-transform: uppercase;
   text-align: center;
@@ -37,12 +37,10 @@
   transition: transform 0.3s ease;
 }
 
-/*Efecto de elevación al pasar el mouse*/
 .card:hover {
   transform: translateY(-5px); 
 }
-    
-/*Para que la imagen se ajuste sin distorsion*/
+
 .card-img-top {
   height: 200px;
   object-fit: cover; 
@@ -53,7 +51,7 @@
   font-weight: 600;
   color: #2c3e50;
 }
-      
+
 .card-text {
   font-size: 0.9rem;
   color: #7f8c8d; 
@@ -68,12 +66,10 @@
   transition: background-color 0.3s ease;
 }
 
-
 .card-img-top {
   height: 150px;
 }
-    
-/*Fondo para la pagina de incio*/
+
 .container.text-center.my-5 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo-principal.png') no-repeat center center/cover;
   color: #fff;
@@ -81,12 +77,10 @@
   border-radius: 10px;
 }
 
-/*Estilos para el parrafo debajo de bienvenida*/
 .container.text-center.my-5 .lead {
-  color:lch(54.54% 72.74 35.91);
+  color: lch(54.54% 72.74 35.91);
 }
 
-/*Estilos para la pagina About.jsx*/
 .container.my-5 p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -98,10 +92,8 @@
   font-size: 1rem;
   margin-bottom: 10px;
   color: #2c3e50;
-} 
+}
 
-/*Estilos para la pagina Reservations*/
-/*Formulario*/
 #reservation-form {
   max-width: 600px;
   margin: 0 auto;
@@ -123,22 +115,14 @@
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
 }
 
-.btn-primary {
-  background-color: #e74c3c;
-  border-color: #e74c3c;
-  padding: 10px 20px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-} /*Salta esta*/
-
 .btn-primary:hover {
   background-color: #c0392b;
   border-color: #c0392b;
 }
-  
+
 @media (max-width: 768px) {
   .section-title {
-  font-size: 2rem;
+    font-size: 2rem;
   }
 
   .menu-layout {
@@ -147,13 +131,17 @@
   }
 
   .dish-fan {
-    width: 300px;
-    height: 400px;
-    margin-top: 20px; /* Aseguramos espacio en pantallas pequeñas */
+    width: 360px;
+    height: 540px;
+    margin-top: 20px;
   }
 
   .fan-card {
-    height: 150px;
+    height: 180px;
+  }
+
+  .fan-container {
+    height: 420px; /* Ajustado para pantallas pequeñas */
   }
 
   .fan-card.expanded {
@@ -162,14 +150,17 @@
   }
 
   .flag {
-    /*Ajustamos el tamaño de la bandera en pantallas pequeñas*/
-    width: 150px;
+    width: 180px;
     margin-top: 10px;
+  }
+
+  .dish-details-inner {
+    flex-direction: column;
   }
 
   .full-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 360px;
   }
 
   .dish-details-text {
@@ -182,7 +173,7 @@
 .menu-layout {
   display: flex;
   justify-content: space-around;
-  gap: 40px; /* Más espacio entre secciones */
+  gap: 40px;
   position: relative;
 }
 
@@ -191,13 +182,24 @@
   text-align: center;
 }
 
-/* Contenedor para las tarjetas en abanico */
+/* Contenedor para las tarjetas en abanico y banderas */
 .dish-fan {
   position: relative;
-  width: 400px;
-  height: 500px;
-  perspective: 1000px; /* Para un efecto 3D */
-  margin-top: 50px; /* Mueve el abanico más abajo del título */
+  width: 415px;
+  height: 530px; /* Aumentado: Para dar espacio a la bandera */
+  perspective: 1000px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Contenedor específico para las tarjetas */
+.fan-container {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Espacio para las tarjetas */
+  perspective: 1000px;
 }
 
 /* Estilo para cada tarjeta */
@@ -251,7 +253,7 @@
   background: rgba(0, 0, 0, 0.6);
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 /* Estilo para la tarjeta expandida */
@@ -270,7 +272,6 @@
 }
 
 .dish-details-overlay {
-  /*Overlay para oscurecer el fondo y centrar el contenido */
   position: fixed;
   top: 0;
   left: 0;
@@ -284,15 +285,14 @@
 }
 
 .dish-details-content {
-  /*Contenedor estilizado para la imagen y descripción */
   background: #fff;
   padding: 40px;
   border-radius: 10px;
-  max-width: 90%; /* Ocupa casi toda la pantalla */
-  max-height: 90%; /* Ocupa casi toda la altura */
+  max-width: 90%;
+  max-height: 90%;
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+  overflow-y: auto;
 }
 
 /* Contenedor para imagen y texto en columnas */
@@ -311,29 +311,33 @@
 }
 
 .dish-details-text {
-  /* Modificado: Estilo para el texto */
   width: 50%;
   text-align: left;
 }
 
 .dish-details-text h5 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
 }
 
 .dish-details-text p {
-  font-size: 1.2rem;
+  font-size: 3.5rem;
   color: #2c3e50;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
+/* Contenedor para la bandera */
+.flag-container {
+  position: relative;
+  width: 100%;
+  margin-top: 1px; 
+  text-align: center;
+}
+
+/* Estilo de la bandera */
 .flag {
-  width: 200px;
-  margin-top: 20px;
+  width: 325px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  display: block; /* Aseguramos que se muestre */
-  /*Para centrarlo*/
-  margin-left: auto;
-  margin-right: auto;
+  display: inline-block;
 }

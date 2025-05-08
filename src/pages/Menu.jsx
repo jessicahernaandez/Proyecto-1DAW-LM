@@ -13,6 +13,7 @@ function Menu() {
           {/* Comidas Salvadoreñas - Lado Izquierdo */}
           <div className="menu-section">
             <div className="dish-fan"> {/*Modificamos el nombre*/}
+            <div className="fan-container"> {/* Otro contener para que pueda separar las tarjetas de las banderas */}
               {salvadoranDishes.map((dish, index) => (
                 //Aseguramos que cada imagen sea clickable y se renderice correctamente
                 <div
@@ -28,6 +29,18 @@ function Menu() {
                   <div className="fan-title">{dish.name}</div>
                 </div>
               ))}
+              </div>
+              {/* Aseguramos que la bandera tenga onError para depuración -> Cambie la bandera dentro del mismo
+              div del abanico, para que no haya tanto espacio.*/}
+              {/* Contenedor para la bandera */}
+              <div className="flag-container">
+                <img 
+                  src="/imagenes/bandera_sv.jpg" 
+                  alt="Bandera de El Salvador" 
+                  className="flag" 
+                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log('Bandera no encontrada: /imagenes/bandera_sv.jpg'); }}
+                />
+              </div>
             </div>
             {expandedDish && salvadoranDishes.find(d => d.name === expandedDish) && (
               <div className="dish-details-overlay animate__animated animate__fadeIn">
@@ -42,19 +55,13 @@ function Menu() {
                   </div>
                 </div>
               </div>
-            )}
-            {/* Aseguramos que la bandera tenga onError para depuración */}
-            <img 
-              src="/imagenes/bandera_sv.jpg" 
-              alt="Bandera de El Salvador" 
-              className="flag" 
-              onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log('Bandera no encontrada: /imagenes/bandera_sv.jpg'); }}
-            />
+            )}  
           </div>
 
           {/* Comidas Mexicanas - Lado Derecho */}
           <div className="menu-section">
             <div className="dish-fan">
+              <div className="fan-container"> {/* Contenedor para separar los abanicos de la bandera */}
               {mexicanDishes.map((dish, index) => (
                 <div
                 key={index}
@@ -69,6 +76,16 @@ function Menu() {
                 <div className="fan-title">{dish.name}</div>
               </div>
             ))}
+            </div>
+              {/* Contenedor para la bandera */}
+              <div className="flag-container">
+                <img 
+                  src="/imagenes/bandera_mx.jpg" 
+                  alt="Bandera de México" 
+                  className="flag" 
+                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log('Bandera no encontrada: /imagenes/bandera_mx.jpg'); }}
+                />
+              </div>
           </div>
             {expandedDish && mexicanDishes.find(d => d.name === expandedDish) && (
               <div className="dish-details-overlay animate__animated animate__fadeIn">
@@ -84,13 +101,6 @@ function Menu() {
                 </div>
               </div>
             )}
-            {/* Aseguramos que la bandera tenga onError para depuración */}
-            <img 
-              src="/imagenes/bandera_mx.jpg" 
-              alt="Bandera de México" 
-              className="flag" 
-              onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log('Bandera no encontrada: /imagenes/bandera_mx.jpg'); }}
-            />
           </div>
         </div>
       </div>
