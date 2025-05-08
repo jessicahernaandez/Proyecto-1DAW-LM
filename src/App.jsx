@@ -1,5 +1,4 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/App.css'; // Se ha modificado la ruta para importarla.
@@ -13,7 +12,6 @@ import Contact from './pages/Contact';
 
 //Componente principal de la aplicación
 function App() {
-  //const [count, setCount] = useState(0);
 
   return (
 
@@ -56,9 +54,12 @@ function App() {
           <Route path="/contact" element={<Contact />} />
        </Routes>
 
-       
-      {/* Contador del ejemplo que viene predefinido al descargar Vite y React (es solo prueba)*/}
-     
+      {/* Contador del ejemplo que viene predefinido al descargar Vite y React (Decidimos dejarlo para la prueba)*/}
+      <div className="text-center my-5">
+        <button onClick={() => setCount((count) => count + 1)} className="btn btn-secondary">
+          Clicks: {count}
+        </button>
+      </div>
     </Router>
   );
 }
