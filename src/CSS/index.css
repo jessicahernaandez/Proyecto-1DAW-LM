@@ -41,3 +41,9 @@ body {
     main {
     padding-top: 80px; /* Espacio para que el contenido no quede debajo de la navbar */
   }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  }
