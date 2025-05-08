@@ -55,11 +55,7 @@ function App() {
        </Routes>
 
       {/* Contador del ejemplo que viene predefinido al descargar Vite y React (Decidimos dejarlo para la prueba)*/}
-      <div className="text-center my-5">
-        <button onClick={() => setCount((count) => count + 1)} className="btn btn-secondary">
-          Clicks: {count}
-        </button>
-      </div>
+      
     </Router>
   );
 }
