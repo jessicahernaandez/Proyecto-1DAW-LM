@@ -68,25 +68,11 @@
   transition: background-color 0.3s ease;
 }
 
-.btn-primary:hover {
-  background-color: #c0392b;
-  border-color: #c0392b;
-}
-  
-@media (max-width: 768px) {
-  .section-title {
-  font-size: 2rem;
-  }
-}
 
 .card-img-top {
   height: 150px;
 }
     
-.btn-primary {
-    padding: 8px 16px;
-}
-
 /*Fondo para la pagina de incio*/
 .container.text-center.my-5 {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/imagenes/fondo-principal.png') no-repeat center center/cover;
@@ -101,4 +87,52 @@
   line-height: 1.8;
   color: #060a18;
   text-align: justify;
+}
+
+.container.my-5 .animate__animated p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+} 
+
+/*Estilos para la pagina Reservations*/
+/*Formulario*/
+#reservation-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #e74c3c;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #c0392b;
+  border-color: #c0392b;
+}
+  
+@media (max-width: 768px) {
+  .section-title {
+  font-size: 2rem;
+  }
 }

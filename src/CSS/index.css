@@ -19,17 +19,20 @@ body {
 .navbar {
   background-color: #ffffff; /* Fondo blanco para la navbar */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 15px 0;
 }
 
 .navbar-brand {
   font-weight: 700;
   color: #e74c3c !important; /*nombre del restaurante */
+  font-size: 1.5rem;
 }
     
 /*Color para los enlaces*/
   .nav-link {
     color: #2c3e50 !important; 
     transition: color 0.3s ease;
+    font-weight: 500;
   }
 
 /*Efecto en el mouse*/
@@ -45,5 +48,13 @@ main {
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
   }
 }

@@ -1,7 +1,7 @@
 //Pagina que tendra el menu del restaurante donde mostramos los platillos de Mexico y El Salvador.
 
 import React, { useEffect } from 'react';
-import { initCarousel } from '../JSS/script.js';
+import { initCarousel } from '../JS/script.js';
 
 
 function Menu() {

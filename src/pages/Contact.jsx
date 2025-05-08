@@ -8,7 +8,8 @@ function Contact() {
       <div className="animate__animated animate__fadeIn animate__delay-1s">
         <p><strong>Dirección:</strong> Calle Principal 123...</p>
         <p><strong>Teléfono:</strong> +503 1234-5678</p>
-        {/* Otros datos */}
+        <p><strong>Correo:</strong> info@saborsalvadoreño.com</p>
+        <p><strong>Horario:</strong> Lunes a Domingo, 10:00 AM - 10:00 PM</p>
       </div>
     </div>
   );
