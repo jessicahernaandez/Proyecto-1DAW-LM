@@ -156,6 +156,11 @@
     height: 350px !important;
   }
 
+  .stack-image {
+    /*Ajustamos el alto para pantallas pequeñas*/
+    height: 120px;
+  }
+
   .flag {
     /*Ajustamos el tamaño de la bandera en pantallas pequeñas*/
     width: 120px;
@@ -196,15 +201,17 @@
 .stack-image {
   position: absolute;
   width: 100%;
-  height: 100%;
+  /* Reducimos el alto para que las imágenes se superpongan correctamente */
+  height: 150px;
   object-fit: cover;
   transition: transform 0.5s ease, opacity 0.5s ease;
-  /* Ajustamos la superposición para que las tres imágenes se vean parcialmente como en la segunda imagen */
-  transform: translateY(calc(100px * (var(--index) - 2)));
-  opacity: 0.7;
+  /* Ajustamos el desplazamiento para que las tres imágenes sean visibles */
+  transform: translateY(calc(90px * var(--index)));
+  opacity: 0.8;
   /* Variable para controlar el desplazamiento */
   --index: 0;
   cursor: pointer;
+  border-radius: 8px;
 }
 
 .stack-image:nth-child(1) {
