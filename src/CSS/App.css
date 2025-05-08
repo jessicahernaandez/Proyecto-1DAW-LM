@@ -81,6 +81,11 @@
   border-radius: 10px;
 }
 
+/*Estilos para el parrafo debajo de bienvenida*/
+.container.text-center.my-5 .lead {
+  color:lch(54.54% 72.74 35.91);
+}
+
 /*Estilos para la pagina About.jsx*/
 .container.my-5 p {
   font-size: 1.1rem;
@@ -114,7 +119,7 @@
 }
 
 .form-control:focus {
-  border-color: #e74c3c;
+  border-color: lch(54.54% 72.74 35.91);
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
 }
 
