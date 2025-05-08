@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-
 function Menu() {
+
 return (
     <div className="container my-5">
       {/*Titulo de la seccion*/}
