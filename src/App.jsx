@@ -16,15 +16,16 @@ function App() {
 
   return (
 
-    <Router>
+    <Router basename="/Proyecto-1DAW-LM">
       {/*Definición de rutas*/}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<Menu />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/reservations" element={<Reservations />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/contact" element={<Contact />} />
+       </Routes>
+      
 
       {/*Barra de navegación con Bootstrap*/}
       <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
