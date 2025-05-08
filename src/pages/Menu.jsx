@@ -12,19 +12,22 @@ function Menu() {
         <div className="menu-layout">
           {/* Comidas Salvadoreñas - Lado Izquierdo */}
           <div className="menu-section">
-            <div className="dish-stack">
+            <div className="dish-fan"> {/*Modificamos el nombre*/}
               {salvadoranDishes.map((dish, index) => (
                 //Aseguramos que cada imagen sea clickable y se renderice correctamente
-                <img
+                <div
                   key={index}
-                  src={dish.image}
-                  alt={dish.name}
-                  className={`stack-image ${expandedDish === dish.name ? 'expanded' : ''}`}
-                  style={{ zIndex: salvadoranDishes.length - index }}
+                  className={`fan-card ${expandedDish === dish.name ? 'expanded' : ''}`}
                   onClick={() => handleDishExpansion(dish.name, expandedDish, setExpandedDish)}
-                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; 
-                  console.log(`Imagen no encontrada: ${dish.image}`); }}
-                />
+                >
+                  <img
+                    src={dish.image}
+                    alt={dish.name}
+                    className="fan-image"
+                    onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log(`Imagen no encontrada: ${dish.image}`); }}
+                  />
+                  <div className="fan-title">{dish.name}</div>
+                </div>
               ))}
             </div>
             {expandedDish && salvadoranDishes.find(d => d.name === expandedDish) && (
@@ -42,21 +45,23 @@ function Menu() {
 
           {/* Comidas Mexicanas - Lado Derecho */}
           <div className="menu-section">
-            <div className="dish-stack">
+            <div className="dish-fan">
               {mexicanDishes.map((dish, index) => (
-                //Aseguramos que cada imagen sea clickable y se renderice correctamente
+                <div
+                key={index}
+                className={`fan-card ${expandedDish === dish.name ? 'expanded' : ''}`}
+                onClick={() => handleDishExpansion(dish.name, expandedDish, setExpandedDish)}
+              >
                 <img
-                  key={index}
                   src={dish.image}
                   alt={dish.name}
-                  className={`stack-image ${expandedDish === dish.name ? 'expanded' : ''}`}
-                  style={{ zIndex: mexicanDishes.length - index }}
-                  onClick={() => handleDishExpansion(dish.name, expandedDish, setExpandedDish)}
-                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; 
-                  console.log(`Imagen no encontrada: ${dish.image}`); }}
+                  className="fan-image"
+                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log(`Imagen no encontrada: ${dish.image}`); }}
                 />
-              ))}
-            </div>
+                <div className="fan-title">{dish.name}</div>
+              </div>
+            ))}
+          </div>
             {expandedDish && mexicanDishes.find(d => d.name === expandedDish) && (
               <div className="dish-details-overlay animate__animated animate__fadeIn">
                 <div className="dish-details-content">
