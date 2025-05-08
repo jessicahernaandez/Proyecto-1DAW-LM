@@ -36,3 +36,8 @@ body {
     .nav-link:hover {
         color: #e74c3c !important;
       }
+
+      
+    main {
+    padding-top: 80px; /* Espacio para que el contenido no quede debajo de la navbar */
+  }
