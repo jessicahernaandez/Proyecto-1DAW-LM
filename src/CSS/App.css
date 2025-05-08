@@ -123,6 +123,14 @@
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
 }
 
+.btn-primary {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+} /*Salta esta*/
+
 .btn-primary:hover {
   background-color: #c0392b;
   border-color: #c0392b;
@@ -139,12 +147,12 @@
   }
 
   .dish-fan {
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
   }
 
   .fan-card {
-    height: 120px;
+    height: 150px;
   }
 
   .fan-card.expanded {
@@ -155,6 +163,16 @@
   .flag {
     /*Ajustamos el tamaño de la bandera en pantallas pequeñas*/
     width: 120px;
+  }
+
+  .full-image {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .dish-details-text {
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
 
@@ -171,11 +189,11 @@
   text-align: center;
 }
 
-* Contenedor para las tarjetas en abanico */
+/* Contenedor para las tarjetas en abanico */
 .dish-fan {
   position: relative;
-  width: 250px;
-  height: 350px;
+  width: 400px;
+  height: 500px;
   perspective: 1000px; /* Para un efecto 3D */
 }
 
@@ -183,7 +201,7 @@
 .fan-card {
   position: absolute;
   width: 100%;
-  height: 150px;
+  height: 200px;
   background: #fff;
   border: 2px solid #e74c3c;
   border-radius: 10px;
@@ -210,7 +228,7 @@
 
 /* Efecto al pasar el mouse sobre el contenedor */
 .dish-fan:hover .fan-card {
-  transform: rotate(0deg) translateY(calc(-50px * var(--index)));
+  transform: rotate(0deg) translateY(calc(-70px * var(--index)));
 }
 
 /* Imagen dentro de la tarjeta */
@@ -231,21 +249,6 @@
   padding: 5px 10px;
   border-radius: 5px;
   font-size: 0.9rem;
-}
-
-/* Estilo para la tarjeta expandida */
-.fan-card.expanded {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
-  width: 500px !important;
-  height: 500px !important;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  z-index: 1000;
-  border: none;
-  box-shadow: none;
 }
 
 .dish-details-overlay {
@@ -272,17 +275,41 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Contenedor para imagen y texto en columnas */
+.dish-details-inner {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .full-image {
-  width: 100%;
-  max-height: 400px;
+  width: 50%;
+  max-height: 300px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.dish-details-text {
+  /* Modificado: Estilo para el texto */
+  width: 50%;
+  text-align: left;
+}
+
+.dish-details-text h5 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.dish-details-text p {
+  font-size: 1rem;
+  color: #2c3e50;
   margin-bottom: 15px;
 }
 
 .flag {
   width: 150px;
-  margin-top: 15px;
+  margin-top: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  display: block; /* Aseguramos que se muestre */
 }

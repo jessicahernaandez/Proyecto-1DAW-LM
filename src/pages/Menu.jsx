@@ -24,7 +24,6 @@ function Menu() {
                     src={dish.image}
                     alt={dish.name}
                     className="fan-image"
-                    onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log(`Imagen no encontrada: ${dish.image}`); }}
                   />
                   <div className="fan-title">{dish.name}</div>
                 </div>
@@ -33,14 +32,24 @@ function Menu() {
             {expandedDish && salvadoranDishes.find(d => d.name === expandedDish) && (
               <div className="dish-details-overlay animate__animated animate__fadeIn">
                 <div className="dish-details-content">
-                  <img src={salvadoranDishes.find(d => d.name === expandedDish).image} alt={expandedDish} className="full-image" />
-                  <h5>{expandedDish}</h5>
-                  <p>{salvadoranDishes.find(d => d.name === expandedDish).description}</p>
-                  <button onClick={() => setExpandedDish(null)} className="btn btn-secondary btn-sm">Cerrar</button>
+                <div className="dish-details-inner">
+                    <img src={salvadoranDishes.find(d => d.name === expandedDish).image} alt={expandedDish} className="full-image" />
+                    <div className="dish-details-text">
+                      <h5>{expandedDish}</h5>
+                      <p>{salvadoranDishes.find(d => d.name === expandedDish).description}</p>
+                      <button onClick={() => setExpandedDish(null)} className="btn btn-secondary btn-sm">Cerrar</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
-            <img src="/imagenes/bandera_sv.jpg" alt="Bandera de El Salvador" className="flag" />
+            {/* Aseguramos que la bandera tenga onError para depuración */}
+            <img 
+              src="/imagenes/bandera_sv.jpg" 
+              alt="Bandera de El Salvador" 
+              className="flag" 
+              onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log('Bandera no encontrada: /imagenes/bandera_sv.jpg'); }}
+            />
           </div>
 
           {/* Comidas Mexicanas - Lado Derecho */}
@@ -56,7 +65,6 @@ function Menu() {
                   src={dish.image}
                   alt={dish.name}
                   className="fan-image"
-                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log(`Imagen no encontrada: ${dish.image}`); }}
                 />
                 <div className="fan-title">{dish.name}</div>
               </div>
@@ -65,14 +73,24 @@ function Menu() {
             {expandedDish && mexicanDishes.find(d => d.name === expandedDish) && (
               <div className="dish-details-overlay animate__animated animate__fadeIn">
                 <div className="dish-details-content">
-                  <img src={mexicanDishes.find(d => d.name === expandedDish).image} alt={expandedDish} className="full-image" />
-                  <h5>{expandedDish}</h5>
-                  <p>{mexicanDishes.find(d => d.name === expandedDish).description}</p>
-                  <button onClick={() => setExpandedDish(null)} className="btn btn-secondary btn-sm">Cerrar</button>
+                <div className="dish-details-inner">
+                    <img src={mexicanDishes.find(d => d.name === expandedDish).image} alt={expandedDish} className="full-image" />
+                    <div className="dish-details-text">
+                      <h5>{expandedDish}</h5>
+                      <p>{mexicanDishes.find(d => d.name === expandedDish).description}</p>
+                      <button onClick={() => setExpandedDish(null)} className="btn btn-secondary btn-sm">Cerrar</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             )}
-            <img src="/imagenes/bandera_mx.jpg" alt="Bandera de México" className="flag" />
+            {/* Aseguramos que la bandera tenga onError para depuración */}
+            <img 
+              src="/imagenes/bandera_mx.jpg" 
+              alt="Bandera de México" 
+              className="flag" 
+              onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; console.log('Bandera no encontrada: /imagenes/bandera_mx.jpg'); }}
+            />
           </div>
         </div>
       </div>

@@ -15,7 +15,7 @@ export const salvadoranDishes = [
   },
   {
     name: 'Atol de Maiz Tostado',
-    image: '/imagenes/tamales.jpg',
+    image: '/imagenes/atol.jpg',
     description: 'bebida tradicional, cálida y reconfortante, elaborada con maíz fresco molido, leche, azúcar y un toque de canela.',
   },
   {
