@@ -17,7 +17,7 @@ function App() {
 
   return (
 
-    <Router basename="/Proyecto-1DAW-LM">
+    <Router basename="/">
       {/*Definición de rutas*/}
         <Routes>
           <Route path="/" element={<Home />} />
