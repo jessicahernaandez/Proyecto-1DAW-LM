@@ -10,7 +10,8 @@ function Home() {
       </p>
       <a href="/menu" className="btn btn-primary btn-lg mt-3 animate__animated animate__fadeIn animate__delay-2s">
         Ver el Menú
-      </a> </div>
+      </a> 
+    </div>
   );
 }
 
