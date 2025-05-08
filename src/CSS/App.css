@@ -4,3 +4,12 @@
 .page-container {
     padding: 40px 0;
   }
+
+  /* Estilos para los títulos de las secciones ("Nuestro Menú" en Menu.jsx) */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #e74c3c; /* Color rojo */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
