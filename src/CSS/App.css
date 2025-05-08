@@ -75,7 +75,7 @@
     
 /*Fondo para la pagina de incio*/
 .container.text-center.my-5 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/public/imagenes/fondo-principal.png') no-repeat center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo-principal.png') no-repeat center center/cover;
   color: #fff;
   padding: 100px 20px;
   border-radius: 10px;

@@ -13,7 +13,7 @@ function About() {
 
 {/* Imagen de "nosotros" centrada */}
 <div className="d-flex justify-content-center my-4 animate__animated animate__fadeIn animate__delay-2s">
-        <img src="/public/imagenes/nosotros.jpg" alt="chef" style={{ maxWidth: '300px', borderRadius: '10px' }}/>
+        <img src="/imagenes/nosotros.jpg" alt="chef" style={{ maxWidth: '300px', borderRadius: '10px' }}/>
     </div>
 
     <p className="animate__animated animate__fadeIn animate__delay-2s">
