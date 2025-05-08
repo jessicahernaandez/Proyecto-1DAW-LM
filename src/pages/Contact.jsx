@@ -14,8 +14,16 @@ function Contact() {
       
       {/* Mapa de Google Maps */}
       <div className="text-center my-4 animate__animated animate__fadeIn animate__delay-2s">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29232.14870044631!2d-3.594219952184864!3d40.42864373754288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4230128e2ea901%3A0x1f970f17650f0b04!2sCoslada%2C%20Madrid!5e1!3m2!1ses!2ses!4v1746742865548!5m2!1ses!2ses" 
-      width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación del restaurante"></iframe>
+      <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29232.14870044631!2d-3.594219952184864!3d40.42864373754288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4230128e2ea901%3A0x1f970f17650f0b04!2sCoslada%2C%20Madrid!5e1!3m2!1ses!2ses!4v1746742865548!5m2!1ses!2ses" 
+      width="400" 
+      height="300" 
+      style={{ border: 0, borderRadius: '10px' }}
+      allowfullscreen="" 
+      loading="lazy" 
+      title="Ubicación del restaurante">
+        
+      </iframe>
       </div>
     </div>
   );
