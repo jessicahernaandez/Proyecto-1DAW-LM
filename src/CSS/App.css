@@ -28,9 +28,21 @@
       transform: translateY(-5px); 
     }
     
-    
-    /* Asegura que la imagen se ajuste sin distorsionarse */
+
+    /* Para que la imagen se ajuste sin distorsion */
     .card-img-top {
       height: 200px;
       object-fit: cover; 
     }
+
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+      
+      .card-text {
+        font-size: 0.9rem;
+        color: #7f8c8d; 
+      }
+
