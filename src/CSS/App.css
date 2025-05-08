@@ -46,3 +46,11 @@
         color: #7f8c8d; 
       }
 
+      /* Estilo para botones (Reservations.jsx/Contact.jsx) */
+.btn-primary {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    padding: 10px 20px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
