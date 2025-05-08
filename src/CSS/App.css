@@ -64,3 +64,12 @@
     .section-title {
       font-size: 2rem;
     }
+
+    .card-img-top {
+        height: 150px;
+      }
+    
+      .btn-primary {
+        padding: 8px 16px;
+      }
+    }
