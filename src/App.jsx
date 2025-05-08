@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './CSS/App.css'; // Se ha modificado la ruta para importarla.
 /*Importaciones de las paginas creadas.*/
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import About from './pages/About';
