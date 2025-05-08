@@ -10,7 +10,8 @@
 /*Estilo base para el body */
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f8f9fa; /* Fondo gris claro */
+  background-color: #fff5f5;
+  /*background-color: #f8f9fa;  Fondo gris claro */
   color: #2c3e50; /* Color de texto oscuro */
   line-height: 1.6;
 }
