@@ -5,9 +5,10 @@ import React from 'react';
 function Menu() {
 
 return (
+  <main className="page-container">
     <div className="container my-5">
       {/*Titulo de la seccion*/}
-      <h2 className="text-center mb-4 animate__animated animate__fadeIn">Nuestro Menú</h2>
+      <h2 className=".section-title">Nuestro Menú</h2>
       {/*Lista de platillos*/}
       <div className="row">
         {/*Platillo 1: Pupusas*/}
@@ -42,6 +43,7 @@ return (
         </div>
       </div>
     </div>
+    </main>
   );
 }
 
