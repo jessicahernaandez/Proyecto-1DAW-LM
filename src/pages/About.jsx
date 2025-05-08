@@ -1,4 +1,5 @@
 
+import React from 'react';
 
 function About() {
     return (
@@ -13,3 +14,5 @@ Nuestra misión es ofrecer una experiencia...
 </div>
 );
 }
+
+export default About;
