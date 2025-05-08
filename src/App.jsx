@@ -9,10 +9,15 @@ import Menu from './pages/Menu';
 import About from './pages/About';
 import Reservations from './pages/Reservations';
 import Contact from './pages/Contact';
+import logo from './assets/logo.jpg';
 
 //Componente principal de la aplicación
 function App() {
   const [count, setCount] = useState(0);
+
+  <div>
+    <img src={logo} alt="Logo" />
+  </div>
 
   return (
 

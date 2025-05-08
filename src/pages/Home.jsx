@@ -1,4 +1,5 @@
 import React from 'react';
+
 function Home() {
   return (
     <div className="container text-center my-5">
@@ -12,4 +13,5 @@ function Home() {
       </a> </div>
   );
 }
+
 export default Home;
