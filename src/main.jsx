@@ -6,6 +6,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 //Importa los estilos de Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 // Importa los estilos globales de la app desde la carpeta css.
 import './CSS/index.css'; //Como se ha modificado la estructura, tambien modificamos la ruta.
 import './CSS/App.css';

@@ -8,7 +8,7 @@ return (
   <main className="page-container">
     <div className="container my-5">
       {/*Titulo de la seccion*/}
-      <h2 className=".section-title">Nuestro Menú</h2>
+      <h2 className="section-title">Nuestro Menú</h2>
       {/*Lista de platillos*/}
       <div className="row">
         {/*Platillo 1: Pupusas*/}
