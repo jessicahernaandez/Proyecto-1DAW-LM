@@ -1,54 +1,76 @@
 //Pagina que tendra el menu del restaurante donde mostramos los platillos de Mexico y El Salvador.
-
-import React, { useEffect } from 'react';
-import { initCarousel } from '../JS/script.js';
-
+import React, { useState } from 'react';
+import { handleDishExpansion, salvadoranDishes, mexicanDishes } from '../JS/script.js';
 
 function Menu() {
-  useEffect(() => {
-    initCarousel();
-  },[]);
+  const [expandedDish, setExpandedDish] = useState(null); 
 
-return (
+  return (
+    <main className="page-container">
+      <div className="container my-5">
+        <h2 className="section-title animate__animated animate__fadeIn">Nuestro Menú</h2>
+        <div className="menu-layout">
+          {/* Comidas Salvadoreñas - Lado Izquierdo */}
+          <div className="menu-section">
+            <div className="dish-stack">
+              {salvadoranDishes.map((dish, index) => (
+                //Aseguramos que cada imagen sea clickable y se renderice correctamente
+                <img
+                  key={index}
+                  src={dish.image}
+                  alt={dish.name}
+                  className={`stack-image ${expandedDish === dish.name ? 'expanded' : ''}`}
+                  style={{ zIndex: salvadoranDishes.length - index }}
+                  onClick={() => handleDishExpansion(dish.name, expandedDish, setExpandedDish)}
+                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; 
+                  console.log(`Imagen no encontrada: ${dish.image}`); }}
+                />
+              ))}
+            </div>
+            {expandedDish && salvadoranDishes.find(d => d.name === expandedDish) && (
+              <div className="dish-details-overlay animate__animated animate__fadeIn">
+                <div className="dish-details-content">
+                  <img src={salvadoranDishes.find(d => d.name === expandedDish).image} alt={expandedDish} className="full-image" />
+                  <h5>{expandedDish}</h5>
+                  <p>{salvadoranDishes.find(d => d.name === expandedDish).description}</p>
+                  <button onClick={() => setExpandedDish(null)} className="btn btn-secondary btn-sm">Cerrar</button>
+                </div>
+              </div>
+            )}
+            <img src="/imagenes/bandera_sv.jpg" alt="Bandera de El Salvador" className="flag" />
+          </div>
 
-  <main className="page-container">
-    <div className="container my-5">
-      {/*Titulo de la seccion*/}
-      <h2 className="section-title">Nuestro Menú</h2>
-      {/*Lista de platillos*/}
-      <div className="row">
-        {/*Platillo 1: Pupusas*/}
-        <div className="col-md-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
-          <div className="card h-100">
-            <img src="imagenes/pupusas.jpg" className="card-img-top" alt="Pupusas de queso" />
-            <div className="card-body">
-              <h5 className="card-title">Pupusas de Queso</h5>
-              <p className="card-text">Deliciosas pupusas salvadoreñas rellenas de queso, servidas con curtido y salsa.</p>
+          {/* Comidas Mexicanas - Lado Derecho */}
+          <div className="menu-section">
+            <div className="dish-stack">
+              {mexicanDishes.map((dish, index) => (
+                //Aseguramos que cada imagen sea clickable y se renderice correctamente
+                <img
+                  key={index}
+                  src={dish.image}
+                  alt={dish.name}
+                  className={`stack-image ${expandedDish === dish.name ? 'expanded' : ''}`}
+                  style={{ zIndex: mexicanDishes.length - index }}
+                  onClick={() => handleDishExpansion(dish.name, expandedDish, setExpandedDish)}
+                  onError={(e) => { e.target.src = '/imagenes/placeholder.jpg'; 
+                  console.log(`Imagen no encontrada: ${dish.image}`); }}
+                />
+              ))}
             </div>
-          </div>
-        </div>
-        {/* Platillo 2: Tacos al Pastor */}
-        <div className="col-md-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
-          <div className="card h-100">
-            <img src="imagenes/tacos.jpg" className="card-img-top" alt="Tacos al pastor" />
-            <div className="card-body">
-              <h5 className="card-title">Tacos al Pastor</h5>
-              <p className="card-text">Tacos mexicanos con carne marinada, piña, cilantro y cebolla.</p>
-            </div>
-          </div>
-        </div>
-        {/* Platillo 3: Tamales */}
-        <div className="col-md-4 mb-4 animate__animated animate__fadeIn animate__delay-1s">
-          <div className="card h-100">
-            <img src="imagenes/tamales.jpg" className="card-img-top" alt="Tamales de pollo" />
-            <div className="card-body">
-              <h5 className="card-title">Tamales de Pollo</h5>
-              <p className="card-text">Tamales salvadoreños/mexicanos de pollo envueltos en hoja de plátano.</p>
-            </div>
+            {expandedDish && mexicanDishes.find(d => d.name === expandedDish) && (
+              <div className="dish-details-overlay animate__animated animate__fadeIn">
+                <div className="dish-details-content">
+                  <img src={mexicanDishes.find(d => d.name === expandedDish).image} alt={expandedDish} className="full-image" />
+                  <h5>{expandedDish}</h5>
+                  <p>{mexicanDishes.find(d => d.name === expandedDish).description}</p>
+                  <button onClick={() => setExpandedDish(null)} className="btn btn-secondary btn-sm">Cerrar</button>
+                </div>
+              </div>
+            )}
+            <img src="/imagenes/bandera_mx.jpg" alt="Bandera de México" className="flag" />
           </div>
         </div>
       </div>
-    </div>
     </main>
   );
 }
