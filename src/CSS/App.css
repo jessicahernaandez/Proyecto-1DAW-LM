@@ -11,7 +11,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #e74c3c; /*Color rojo*/
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -149,6 +149,7 @@
   .dish-fan {
     width: 300px;
     height: 400px;
+    margin-top: 20px; /* Aseguramos espacio en pantallas pequeñas */
   }
 
   .fan-card {
@@ -162,7 +163,8 @@
 
   .flag {
     /*Ajustamos el tamaño de la bandera en pantallas pequeñas*/
-    width: 120px;
+    width: 150px;
+    margin-top: 10px;
   }
 
   .full-image {
@@ -180,7 +182,7 @@
 .menu-layout {
   display: flex;
   justify-content: space-around;
-  gap: 10px; 
+  gap: 40px; /* Más espacio entre secciones */
   position: relative;
 }
 
@@ -195,6 +197,7 @@
   width: 400px;
   height: 500px;
   perspective: 1000px; /* Para un efecto 3D */
+  margin-top: 50px; /* Mueve el abanico más abajo del título */
 }
 
 /* Estilo para cada tarjeta */
@@ -251,6 +254,21 @@
   font-size: 0.9rem;
 }
 
+/* Estilo para la tarjeta expandida */
+.fan-card.expanded {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  width: 500px !important;
+  height: 500px !important;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) !important;
+  z-index: 1000;
+  border: none;
+  box-shadow: none;
+}
+
 .dish-details-overlay {
   /*Overlay para oscurecer el fondo y centrar el contenido */
   position: fixed;
@@ -268,23 +286,26 @@
 .dish-details-content {
   /*Contenedor estilizado para la imagen y descripción */
   background: #fff;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 90%; /* Ocupa casi toda la pantalla */
+  max-height: 90%; /* Ocupa casi toda la altura */
   text-align: center;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
 }
 
 /* Contenedor para imagen y texto en columnas */
 .dish-details-inner {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
+  justify-content: center;
 }
 
 .full-image {
   width: 50%;
-  max-height: 300px;
+  max-height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -296,20 +317,23 @@
 }
 
 .dish-details-text h5 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .dish-details-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #2c3e50;
   margin-bottom: 15px;
 }
 
 .flag {
-  width: 150px;
+  width: 200px;
   margin-top: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: block; /* Aseguramos que se muestre */
+  /*Para centrarlo*/
+  margin-left: auto;
+  margin-right: auto;
 }
