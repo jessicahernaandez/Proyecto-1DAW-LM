@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { handleDishExpansion, salvadoranDishes, mexicanDishes } from '../JS/script.js';
 import '../CSS/Menu.css';
+import 'animate.css';
 
 function Menu() {
   const [expandedDish, setExpandedDish] = useState(null); 
