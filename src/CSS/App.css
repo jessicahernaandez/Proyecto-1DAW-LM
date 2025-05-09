@@ -1,9 +1,85 @@
 /*Estilos especificos para los componentes de la paginas, Menu.jsx, About.jsx, etc*/
 
 /*Contenedor principal para las páginas*/
-.page-container {
+.contenedor-principal { /*era page-container*/
   padding: 40px 0;
   background-color: #fff5f5;
+}
+
+/*PAGINA HOME.JSX*/
+/*Estilos para los títulos de las secciones "Bienvenidos a Sabor..."*/
+.titulo-principal {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.titulo-principal::after {
+  content: '';
+  width: 80px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Texto debajo del título*/
+.contenedor-imagen-titulo .pequeña-intro {
+  font-size: 1.5rem;
+  color:#d0ece7 ;
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+
+/*Imagen de fondo dentro del contenedor, donde esta ubicado el titulo de inicio con su breve descripcion*/
+.contenedor-imagen-titulo {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo-principal.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 120px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/*Contenedor del botón*/
+.contenedor-boton {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 65px;
+}
+
+/*Estilo del botón*/
+.boton-personalizado {
+  display: inline-block;
+  padding: 18px 24px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #B22222 0%, #006400 100%);
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 190px;
+  height: 70px;
+  text-align: center;
+}
+
+/*Estilos al poner el raton encima de el boton*/
+.boton-personalizado:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
 /*Estilos para los títulos de las secciones ("Nuestro Menú" en Menu.jsx)*/
@@ -70,17 +146,6 @@
   height: 150px;
 }
 
-.container.text-center.my-5 {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo-principal.png') no-repeat center center/cover;
-  color: #fff;
-  padding: 100px 20px;
-  border-radius: 10px;
-}
-
-.container.text-center.my-5 .lead {
-  color: lch(54.54% 72.74 35.91);
-}
-
 .container.my-5 p {
   font-size: 1.1rem;
   line-height: 1.8;
@@ -118,55 +183,6 @@
 .btn-primary:hover {
   background-color: #c0392b;
   border-color: #c0392b;
-}
-
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .menu-layout {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dish-fan {
-    width: 360px;
-    height: 540px;
-    margin-top: 20px;
-  }
-
-  .fan-card {
-    height: 180px;
-  }
-
-  .fan-container {
-    height: 420px; /* Ajustado para pantallas pequeñas */
-  }
-
-  .fan-card.expanded {
-    width: 350px !important;
-    height: 350px !important;
-  }
-
-  .flag {
-    width: 180px;
-    margin-top: 10px;
-  }
-
-  .dish-details-inner {
-    flex-direction: column;
-  }
-
-  .full-image {
-    width: 100%;
-    max-width: 360px;
-  }
-
-  .dish-details-text {
-    margin-left: 0;
-    margin-top: 20px;
-  }
 }
 
 /*Estilos para el Menu (se complementa con el script.js)*/
@@ -340,4 +356,53 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .menu-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dish-fan {
+    width: 360px;
+    height: 540px;
+    margin-top: 20px;
+  }
+
+  .fan-card {
+    height: 180px;
+  }
+
+  .fan-container {
+    height: 420px; /* Ajustado para pantallas pequeñas */
+  }
+
+  .fan-card.expanded {
+    width: 350px !important;
+    height: 350px !important;
+  }
+
+  .flag {
+    width: 180px;
+    margin-top: 10px;
+  }
+
+  .dish-details-inner {
+    flex-direction: column;
+  }
+
+  .full-image {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .dish-details-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
