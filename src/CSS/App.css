@@ -358,7 +358,40 @@
   display: inline-block;
 }
 
+/*Este apartado es para lograr que tambien se pueda adaptar en telefonos o tablets.*/
 @media (max-width: 768px) {
+
+  /*Ajustes necesarios para Home.jsx*/
+  .titulo-principal {
+    font-size: 2rem; /*Reducir tamaño del título*/
+    margin-bottom: 15px; /*Menos margen*/
+  }
+
+  .contenedor-imagen-titulo {
+    padding: 60px 10px; /*Reducir padding para pantallas pequeñas*/
+    margin-left: 0; /*Eliminar márgenes laterales*/
+    margin-right: 0; /*Eliminar márgenes laterales*/
+    border-radius: 8px; /*Reducir radio de borde*/
+  }
+
+  .contenedor-imagen-titulo .pequeña-intro {
+    font-size: 1.2rem; /*Reducir tamaño del texto*/
+    margin-bottom: 20px; /*Ajustar margen*/
+    text-align: center; /*Centrar texto en móviles*/
+  }
+
+  .contenedor-boton {
+    margin-top: 30px; /*Reducir margen superior*/
+    margin-bottom: 50px; /*Reducir margen inferior*/
+  }
+
+  .boton-personalizado {
+    font-size: 1.1rem; /*Reducir tamaño del texto del botón*/
+    padding: 12px 18px; /*Reducir padding*/
+    width: 160px; /*Reducir ancho*/
+    height: 60px; /*Reducir altura*/
+  }
+
   .section-title {
     font-size: 2rem;
   }

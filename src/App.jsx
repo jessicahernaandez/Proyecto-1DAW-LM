@@ -54,8 +54,6 @@ function App() {
           <Route path="/contact" element={<Contact />} />
        </Routes>
 
-      {/* Contador del ejemplo que viene predefinido al descargar Vite y React (Decidimos dejarlo para la prueba)*/}
-      
     </Router>
   );
 }
