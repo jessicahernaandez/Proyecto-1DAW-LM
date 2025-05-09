@@ -1,16 +1,16 @@
 /* eslint-disable react/react-in-jsx-scope */
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './CSS/App.css'; // Se ha modificado la ruta para importarla.
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'; /*Herramientras para manejar la navegación*/ 
+import 'bootstrap/dist/css/bootstrap.min.css'; /*Estilos personalizados de BootStrap (como la barra de navegacion que hemos usado) */
+import './CSS/App.css'; /*Los estilos personalizados que hemos definido*/
+import 'bootstrap/dist/js/bootstrap.bundle.min.js'; /*El JavaScript de BootStrap para funcionalidades interactivas*/
 /*Importaciones de las paginas creadas.*/
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Home from './pages/Home';
 import Menu from './pages/Menu';
 import About from './pages/About';
 import Reservations from './pages/Reservations';
 import Contact from './pages/Contact';
 
-//Componente principal de la aplicación
+//Componente principal de la aplicación (nuestro esqueleto)
 function App() {
 
   return (

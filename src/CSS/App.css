@@ -1,12 +1,39 @@
 /*Estilos especificos para los componentes de la paginas, Menu.jsx, About.jsx, etc*/
 
-/*Contenedor principal para las páginas*/
-.contenedor-principal { /*era page-container*/
-  padding: 40px 0;
-  background-color: #fff5f5;
+/*APP.JSX*/
+/*Estilos para personalizar la barra importada de BootStrap*/
+.navbar {
+  background-color: #cb4335 !important; 
+  border-bottom: 2px solid #fff; 
+}
+
+/*Titulo de la barra*/
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff !important; 
+}
+
+/*Enlaces de la barra*/
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff !important; 
+  transition: color 0.3s ease;
+}
+
+/*Que cambie de color al pasa el mouse*/
+.nav-link:hover {
+  color: #34495e  !important; /* Amarillo al pasar el mouse */
 }
 
 /*PAGINA HOME.JSX*/
+/*Contenedor principal (donde se encuentra la imagen con los titulos)*/
+.contenedor-principal {
+  padding: 55px 0;
+  background-color: #fff5f5;
+}
+
 /*Estilos para los títulos de las secciones "Bienvenidos a Sabor..."*/
 .titulo-principal {
   font-size: 2.8rem;
@@ -361,12 +388,24 @@
 /*Este apartado es para lograr que tambien se pueda adaptar en telefonos o tablets.*/
 @media (max-width: 768px) {
 
+  /*APP.JSX*/
+  /*Estilos responsivos para la barra de navegacion*/
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
   /*Ajustes necesarios para Home.jsx*/
   .titulo-principal {
     font-size: 2rem; /*Reducir tamaño del título*/
     margin-bottom: 15px; /*Menos margen*/
   }
 
+  /*HOME.JSX*/
   .contenedor-imagen-titulo {
     padding: 60px 10px; /*Reducir padding para pantallas pequeñas*/
     margin-left: 0; /*Eliminar márgenes laterales*/
