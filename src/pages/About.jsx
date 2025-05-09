@@ -1,22 +1,23 @@
 
 import React from 'react';
+import '../CSS/About.css';
 
 function About() {
     return (
-    <div className="container my-5">
-    <h2 className="text-center mb-4 animate__animated animate__fadeIn">Acerca de Nosotros</h2>
-    <p className="animate__animated animate__fadeIn animate__delay-1s">
+    <div className="contenedor-acerca-de">
+    <h2 className="titulo-acerca-de mb-4 animate__animated animate__fadeIn">Acerca de Nosotros</h2>
+    <p className="texto-descripcion animate__fadeIn animate__delay-1s">
     Sabor Salvadoreño y Mexicano nació de la pasión por compartir la riqueza de nuestras culturas a través de la comida. 
     Somos un equipo dedicado a traer los auténticos sabores de El Salvador y México a tu mesa.
     </p>
 
 
 {/* Imagen de "nosotros" centrada */}
-<div className="d-flex justify-content-center my-4 animate__animated animate__fadeIn animate__delay-2s">
+<div className="contenedor-imagen-acerca animate__animated animate__fadeIn animate__delay-2s">
         <img src="/imagenes/nosotros.jpg" alt="chef" style={{ maxWidth: '300px', borderRadius: '10px' }}/>
     </div>
 
-    <p className="animate__animated animate__fadeIn animate__delay-2s">
+    <p className="texto-descripcion animate__fadeIn animate__delay-2s">
     Nuestra misión es ofrecer una experiencia gastronómica única, con platillos preparados 
     con ingredientes frescos y recetas tradicionales que han pasado de generación en generación.
     </p>

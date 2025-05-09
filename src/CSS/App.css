@@ -93,19 +93,6 @@
   height: 150px;
 }
 
-.container.my-5 p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #060a18;
-  text-align: justify;
-}
-
-.container.my-5 .animate__animated p {
-  font-size: 1rem;
-  margin-bottom: 10px;
-  color: #2c3e50;
-}
-
 #reservation-form {
   max-width: 600px;
   margin: 0 auto;
