@@ -1,0 +1,90 @@
+/*Estilos personalizados para Reservations.jsx*/
+
+/*Contenedor principal de la página Reservas*/
+.contenedor-reservas {
+  padding: 40px 0;
+  background-color: #fff5f5;
+}
+
+/*Centra el formulario*/
+#formulario-reserva {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*Estilo para el título "Haz tu Reserva"*/
+.titulo-reservas {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*Estilo para las etiquetas del formulario*/
+.etiqueta-formulario {
+  font-weight: 600;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/*Estilo para los campos de entrada*/
+.campo-formulario {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+  width: 100%;
+  height: 40px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.campo-formulario:focus {
+  border-color: lch(54.54% 72.74 35.91);
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+
+/*Estilo para el botón de reserva*/
+.boton-reserva {
+  background-color: #e74c3c;
+  border: 1px solid #ced4da;
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: border-color 0.3s ease;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.boton-reserva:hover {
+  border-color: lch(54.54% 72.74 35.91);
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+/*Estilos responsivos para Reservas*/
+@media (max-width: 768px) {
+  .contenedor-reservas {
+    padding: 20px 0;
+  }
+
+  .titulo-reservas {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  .formulario-reserva {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .campo-formulario {
+    font-size: 0.9rem;
+  }
+
+  .boton-reserva {
+    width: 100%;
+    padding: 8px 15px;
+  }
+}

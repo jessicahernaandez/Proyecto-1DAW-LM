@@ -81,43 +81,12 @@
 }
 
 /*Estilo para botones (Reservations.jsx/Contact.jsx)*/
-.btn-primary {
-  background-color: #e74c3c;
-  border-color: #e74c3c;
-  padding: 10px 20px;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
-}
+
 
 .card-img-top {
   height: 150px;
 }
 
-#reservation-form {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.form-label {
-  font-weight: 600;
-  color: #2c3e50;
-}
-
-.form-control {
-  border-radius: 5px;
-  border: 1px solid #ced4da;
-  transition: border-color 0.3s ease;
-}
-
-.form-control:focus {
-  border-color: lch(54.54% 72.74 35.91);
-  box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
-}
-
-.btn-primary:hover {
-  background-color: #c0392b;
-  border-color: #c0392b;
-}
 
 /*Estilos para el Menu (se complementa con el script.js)*/
 .menu-layout {

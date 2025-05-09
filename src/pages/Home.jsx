@@ -7,7 +7,8 @@ function Home() {
       <div className="contenedor-imagen-titulo">
         <h1 className="titulo-principal animate__animated animate__fadeIn">Bienvenidos a Sabor Salvadoreño y Mexicano</h1>
         <p className="pequeña-intro animate__animated animate__fadeIn animate__delay-1s">
-          Disfruta de los auténticos sabores de El Salvador y México...
+          Disfruta de los auténticos sabores de El Salvador y México... <br></br>
+          ¡Te invitamos a probar nuestras especialidades y a vivir una experiencia gastronómica única!
         </p>
       </div>
       <div className="contenedor-boton">
