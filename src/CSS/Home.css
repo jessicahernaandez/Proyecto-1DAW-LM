@@ -1,5 +1,4 @@
 /*Estilos personalizados para la pagina Home.jsx*/
-/*PAGINA HOME.JSX*/
 /*Contenedor principal (donde se encuentra la imagen con los titulos)*/
 .contenedor-principal {
   padding: 55px 0;
@@ -43,7 +42,7 @@
 .contenedor-imagen-titulo {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo-principal.png') no-repeat center center/cover;
   color: #fff;
-  padding: 120px 20px;
+  padding: 100px 30px;
   border-radius: 12px;
   margin-bottom: 30px;
   margin-left: 60px;
