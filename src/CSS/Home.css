@@ -1,0 +1,111 @@
+/*Estilos personalizados para la pagina Home.jsx*/
+/*PAGINA HOME.JSX*/
+/*Contenedor principal (donde se encuentra la imagen con los titulos)*/
+.contenedor-principal {
+  padding: 55px 0;
+  background-color: #fff5f5;
+}
+
+/*Estilos para los títulos de las secciones "Bienvenidos a Sabor..."*/
+.titulo-principal {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+}
+
+.titulo-principal::after {
+  content: '';
+  width: 80px;
+  height: 5px;
+  background: #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*Texto debajo del título*/
+.contenedor-imagen-titulo .pequeña-intro {
+  font-size: 1.5rem;
+  color:#d0ece7 ;
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+
+/*Imagen de fondo dentro del contenedor, donde esta ubicado el titulo de inicio con su breve descripcion*/
+.contenedor-imagen-titulo {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/imagenes/fondo-principal.png') no-repeat center center/cover;
+  color: #fff;
+  padding: 120px 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/*Contenedor del botón*/
+.contenedor-boton {
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 65px;
+}
+
+/*Estilo del botón*/
+.boton-personalizado {
+  display: inline-block;
+  padding: 18px 24px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, #B22222 0%, #006400 100%);
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 190px;
+  height: 70px;
+  text-align: center;
+}
+
+/*Estilos al poner el raton encima de el boton*/
+.boton-personalizado:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/*Estilos Responsivos*/
+@media (max-width: 768px) {
+    
+  .contenedor-imagen-titulo {
+    padding: 60px 10px; /*Reducir padding para pantallas pequeñas*/
+    margin-left: 0; /*Eliminar márgenes laterales*/
+    margin-right: 0; 
+    border-radius: 8px; /*Reducir radio de borde*/
+  }
+
+  .contenedor-imagen-titulo .pequeña-intro {
+    font-size: 1.2rem; /*Reducir tamaño del texto*/
+    margin-bottom: 20px; /*Ajustar margen*/
+    text-align: center; /*Centrar texto en móviles*/
+  }
+
+  .contenedor-boton {
+    margin-top: 30px; /*Reducir margen superior*/
+    margin-bottom: 50px; /*Reducir margen inferior*/
+  }
+
+  .boton-personalizado {
+    font-size: 1.1rem; /*Reducir tamaño del texto del botón*/
+    padding: 12px 18px; /*Reducir padding*/
+    width: 160px; /*Reducir ancho*/
+    height: 60px; /*Reducir altura*/
+  }
+}
