@@ -1,9 +1,16 @@
 //Páginas de formulario para reservas en el formulario
 
-import React from 'react';
-import '../CSS/Reservations.css'
+import React, { useEffect } from 'react';
+import '../CSS/Reservations.css'//Importar estilos específicos de Reservas
+import { inicializarValidacion } from '../JS/validacion.js'; //Importar la función de inicialización
 
+//Esto configura el event listener en el formulario (id="formulario-reserva") para que ejecute validarFormulario al enviarse.
 function Reservations() {
+  //Llamamos a inicializarValidacion() cuando el componente se monta (es decir, cuando la página de reservas se carga).
+  useEffect(() => {
+    inicializarValidacion(); 
+  }, []); //'[]' asegura que solo se ejecute 1 vez.
+
   return (
     <div className="contenedor-reservas">
       {/* Título de la sección */}
@@ -28,6 +35,12 @@ function Reservations() {
         </div>
         <button type="submit" className="boton-reserva">Reservar</button>
       </form>
+      {/*Inicialmente está oculto con style={{ display: 'none' }}.
+      -> Cuando validacion.js despacha el evento formSuccess, el listener en validacion.js lo hace visible (display: 'block').
+      Después de 3 segundos, el evento formHideSuccess lo oculta nuevamente (display: 'none').*/}
+      <div className="mensaje-exito animate__animated animate__fadeIn" style={{ display: 'none' }}>
+         ¡Reserva realizada con éxito!
+      </div>
     </div>
   );
 }

@@ -56,11 +56,28 @@
   transition: border-color 0.3s ease;
   border-radius: 5px;
   color: #fff;
+  display: block;
+  margin: 0 auto;
 }
 
 .boton-reserva:hover {
   border-color: lch(54.54% 72.74 35.91);
   box-shadow: 0 0 5px rgba(231, 76, 60, 0.3);
+}
+
+/*Estilo para el mensaje de éxito*/
+.mensaje-exito {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #27ae60;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /*Estilos responsivos para Reservas*/
@@ -74,8 +91,8 @@
     margin-bottom: 15px;
   }
 
-  .formulario-reserva {
-    max-width: 100%;
+  #formulario-reserva {
+    max-width: 80%;
     padding: 0 15px;
   }
 
@@ -84,7 +101,16 @@
   }
 
   .boton-reserva {
-    width: 100%;
+    width: 60%;
     padding: 8px 15px;
+  }
+
+  .etiqueta-formulario {
+    text-align: left;
+  }
+
+  .mensaje-exito {
+    width: 80%;
+    padding: 10px 20px;
   }
 }
