@@ -1,5 +1,4 @@
 /*Estilos personalizados para About.jsx*/
-
 /*Contenedor principal de la página Acerca de*/
 .contenedor-acerca-de {
   padding: 40px 0;
@@ -46,7 +45,7 @@
   transform: scale(1.05);
 }
 
-/* Estilos responsivos para Acerca de */
+/*Estilos responsivos para Acerca de */
 @media (max-width: 768px) {
   .contenedor-acerca-de {
     padding: 20px 0;

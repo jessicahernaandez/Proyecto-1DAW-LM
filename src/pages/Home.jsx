@@ -16,7 +16,7 @@ function Home() {
           Ver el Menú
         </a>
       </div>
-      {/* Agregar las banderas */}
+      {/*Agregar las banderas*/}
       <img src="/imagenes/bandera_sv.jpg" alt="Bandera de El Salvador" className="bandera bandera-salvador animate__animated animate__fadeIn animate__delay-3s" />
       <img src="/imagenes/bandera_mx.jpg" alt="Bandera de México" className="bandera bandera-mexico animate__animated animate__fadeIn animate__delay-4s" />
     </div>

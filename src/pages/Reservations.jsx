@@ -15,7 +15,7 @@ function Reservations() {
     <div className="contenedor-reservas">
       {/* Título de la sección */}
       <h2 className="titulo-reservas mb-4 animate__animated animate__fadeIn">Haz tu Reserva</h2>
-      {/* Formulario */}
+      {/*Formulario*/}
       <form id="formulario-reserva" className="animate__animated animate__fadeIn animate__delay-1s">
         <div className="mb-3">
           <label htmlFor="nombre" className="etiqueta-formulario">Nombre</label>

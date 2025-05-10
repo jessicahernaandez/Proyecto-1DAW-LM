@@ -81,7 +81,7 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
-/* Estilos para las banderas */
+/*Estilos para las banderas*/
 .bandera {
   position: absolute;
   width: 250px; /*Ajusta el tamaño según sea necesario*/
@@ -94,7 +94,7 @@
 }
 
 .bandera-mexico {
-  right: 210px; /* Distancia desde la derecha */
+  right: 210px; /*Distancia desde la derecha*/
 }
 
 /*Estilos Responsivos*/
