@@ -9,6 +9,21 @@
   font-size: 2.5rem;
   font-weight: 700;
   color: #e74c3c;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.titulo-menu::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #e74c3c;
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /*Cuadrícula de platillos (usando Bootstrap)*/

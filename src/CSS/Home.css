@@ -3,6 +3,7 @@
 .contenedor-principal {
   padding: 55px 0;
   background-color: #fff5f5;
+  position: relative; /*Para que las banderas se puedan ajustar bien*/
 }
 
 /*Estilos para los títulos de las secciones "Bienvenidos a Sabor..."*/
@@ -10,7 +11,7 @@
   font-size: 2.8rem;
   font-weight: 700;
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   text-align: center;
   position: relative;
@@ -20,7 +21,7 @@
 .titulo-principal::after {
   content: '';
   width: 80px;
-  height: 5px;
+  height: 7px;
   background: #fff;
   position: absolute;
   bottom: -10px;
@@ -80,6 +81,22 @@
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
 }
 
+/* Estilos para las banderas */
+.bandera {
+  position: absolute;
+  width: 250px; /*Ajusta el tamaño según sea necesario*/
+  height: auto;
+  bottom: 60px; /*Distancia desde la parte inferior*/
+}
+
+.bandera-salvador {
+  left: 210px; 
+}
+
+.bandera-mexico {
+  right: 210px; /* Distancia desde la derecha */
+}
+
 /*Estilos Responsivos*/
 @media (max-width: 768px) {
     
@@ -98,7 +115,10 @@
 
   .contenedor-boton {
     margin-top: 30px; /*Reducir margen superior*/
-    margin-bottom: 50px; /*Reducir margen inferior*/
+    margin-bottom: 60px; /*Reducir margen inferior*/
+    flex-direction: row; /*Mantener fila horizontal*/
+    flex-wrap: wrap; /*Permitir que los elementos se ajusten si no caben*/
+    gap: 10px; /*Espacio entre elementos*/
   }
 
   .boton-personalizado {
@@ -106,5 +126,21 @@
     padding: 12px 18px; /*Reducir padding*/
     width: 160px; /*Reducir ancho*/
     height: 60px; /*Reducir altura*/
+  }
+
+  /*Ajustar tamaño y espaciado de las banderas en pantallas pequeñas*/
+  .bandera {
+    width: 90px; /*Reducir tamaño de las banderas*/
+    margin-top: 10px; /*Reducir margen superior*/
+  }
+
+  .bandera-salvador {
+    margin-left: 90px;
+    margin-right: 5px;
+  }
+
+  .bandera-mexico {
+    margin-right: 90px; /*Reducir espaciado*/
+    margin-left: 5px;
   }
 }
