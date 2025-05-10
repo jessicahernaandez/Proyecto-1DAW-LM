@@ -1,312 +1,144 @@
-/*Estilos personalizados para Menu.css*/
-
-/*Estilo para el contenedor principal de la página*/
-.contenedor-pagina {
+/*Fondo claro para el contenedor principal*/
+.contenedor-principal {
+  background-color: #f8f9fa;
   padding: 20px;
-  background-color: #fff5f5;
 }
 
-/*Contenedor interno que centra el contenido*/
-.contenedor {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/*Títulos de las secciones ("Nuestro Menú")*/
-.titulo-seccion {
+/*Estilo para el título del menú*/
+.titulo-menu {
   font-size: 2.5rem;
   font-weight: 700;
   color: #e74c3c;
-  margin-bottom: 50px;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
 }
 
-/*Efecto del subrayado*/
-.titulo-seccion::after {
-  content: '';
-  width: 60px;
-  height: 4px;
-  background: #e74c3c;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/*Disposición del menú en dos columnas*/
-.disposicion-menu {
+/*Cuadrícula de platillos (usando Bootstrap)*/
+.cuadricula-platillos {
   display: flex;
-  justify-content: space-around;
-  gap: 40px; /*Para que las banderas esten mas juntas*/
-  position: relative;
-}
-
-/*Sección individual del menú*/
-.seccion-menu {
-  position: relative;
-  text-align: center;
-}
-
-/*Contenedor del abanico de platillos y banderas*/
-.abanico-platillos {
-  position: relative;
-  width: 415px;
-  height: 530px; /*Aumentado para dar espacio a la bandera*/
-  perspective: 1000px;
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/*Contenedor específico para las tarjetas*/
-.contenedor-abanico {
-  position: relative;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center; /*Centra las tarjetas horizontalmente*/
   width: 100%;
-  height: 500px; /*Espacio para las tarjetas*/
-  perspective: 1000px;
 }
 
-/*Estilo para cada tarjeta de abanico*/
-.tarjeta-abanico {
-  position: absolute;
-  width: 100%;
-  height: 200px;
-  background: #fff;
-  border: 2px solid black;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.5s ease, opacity 0.5s ease;
-  cursor: pointer;
-  transform-origin: bottom center;
-  transform: rotate(calc(10deg * var(--index)));
-  --index: 0;
+/*Columna para cada platillo*/
+.columna-platillo {
+  flex:0 0 48.4444%;
+  max-width: 48.444%;
+  margin-bottom: 1rem;
 }
 
-/*Posicionamiento de las tarjetas (las imagenes se inclinan)*/
-.tarjeta-abanico:nth-child(1) {
-  --index: -1;
-}
-
-.tarjeta-abanico:nth-child(2) {
-  --index: 0;
-}
-
-.tarjeta-abanico:nth-child(3) {
-  --index: 1;
-}
-
-/*Efecto al pasar el mouse sobre el abanico*/
-.abanico-platillos:hover .tarjeta-abanico {
-  transform: rotate(0deg) translateY(calc(-70px * var(--index)));
-}
-
-/*Para poder formar el abanico*/
-.imagen-abanico {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-/*Título en la foto del abanico*/
-.titulo-abanico {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 5px 10px;
+/*Estilo para las tarjetas de platillos*/
+.tarjeta-platillo {
+  background: white;
+  border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-/*Estilo para la tarjeta expandida*/
-.tarjeta-abanico.expanded {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
-  width: 500px !important;
-  height: 500px !important;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
-  z-index: 1000;
-  border: none;
-  box-shadow: none;
+.tarjeta-platillo:hover {
+  transform: scale(1.05);
 }
 
-/*Superposición para los detalles del platillo (cuando hagamos clic en un platillo)*/
-.superposicion-detalles-platillo {
+/*Imagen dentro de la tarjeta*/
+.imagen-platillo {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+/*Contenido de la tarjeta (nombre)*/
+.contenido-tarjeta {
+  padding: 15px;
+  text-align: center;
+}
+
+.nombre-platillo {
+  font-size: 1.25rem;
+  margin: 0;
+  color: #333;
+}
+
+/*Estilo para la ventana de detalles*/
+.ventana-detalles {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  z-index: 999;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
-/*Contenido dentro de la superposición*/
-.contenido-detalles-platillo {
-  background: #fff;
-  padding: 40px;
+/*Contenido de la ventana*/
+.contenido-ventana {
+  background: white;
+  padding: 20px;
   border-radius: 10px;
-  max-width: 90%;
-  max-height: 90%;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  overflow-y: auto;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/*Diseño de columnas para imagen y texto*/
-.interior-detalles-platillo {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  justify-content: center;
-}
-
-/*Imagen completa en el overlay*/
-.imagen-completa {
-  width: 50%;
-  max-height: 500px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-/*Texto descriptivo en el overlay*/
-.texto-detalles-platillo {
-  width: 50%;
-  text-align: left;
-}
-
-.texto-detalles-platillo h5 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.texto-detalles-platillo p {
-  font-size: 1.3rem;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-align: center;
-}
-
-/*Contenedor para la bandera*/
-.contenedor-bandera {
-  position: relative;
+/*Imagen en la ventana de detalles*/
+.imagen-detalles {
   width: 100%;
-  margin-top: 1px;
-  text-align: center;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 15px;
 }
 
-/*Estilo de la bandera*/
-.bandera {
-  width: 325px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  display: inline-block;
+/*Títulos y texto en la ventana*/
+.contenido-ventana h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #e74c3c;
 }
 
-/*Estilo para el boton dentro de la tarjeta*/
-.button-on-click {
-  background-color:#bfc9ca;
-  width: 90px;
-  color: white;
-  border-radius: 5px;
+.contenido-ventana p {
   font-size: 1rem;
-  border: none;
-  height: 40px;
-  position: absolute;
-  top: 50px; 
-  left: 42%;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.button-on-click:hover{
-  background-color:#2c3e50;
+/*Botón de cerrar*/
+.boton-cerrar {
+  font-size: 1rem;
+  padding: 8px 20px;
 }
 
-/*Centrar el boton*/
-.texto-detalles-platillo .button-on-click {
-    position: relative;
-}
-
-/*Estilos responsivos para pantallas pequeñas*/
+/*Responsividad para pantallas pequeñas*/
 @media (max-width: 768px) {
-.disposicion-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; 
+  .columna-platillo {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 
-  .abanico-platillos {
-    width: 300px; 
-    height: 400px; 
-    margin-top: 20px;
+  .imagen-platillo {
+    height: 150px;
   }
 
-  .contenedor-abanico {
-    height: 350px; 
+  .contenido-ventana {
+    padding: 15px;
+    max-width: 90%;
   }
 
-  .tarjeta-abanico {
-    height: 150px; 
+  .imagen-detalles {
+    max-height: 200px;
   }
 
-  .tarjeta-abanico.expanded {
-    width: 300px !important;
-    height: 300px !important;
-  }
-
-  .bandera {
-    width: 180px; 
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
-
-  .contenido-detalles-platillo {
-    padding: 15px; 
-  }
-
-  .interior-detalles-platillo {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .imagen-completa {
-    width: 100%;
-    max-width: 300px;
-    max-height: 300px;
-  }
-
-  .texto-detalles-platillo {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 15px;
-  }
-
-  .texto-detalles-platillo h5 {
+  .contenido-ventana h3 {
     font-size: 1.5rem;
   }
 
-  .texto-detalles-platillo p {
+  .contenido-ventana p {
     font-size: 0.9rem;
-  }
-
-  .button-on-click {
-    position: relative;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 10px;
   }
 }

@@ -1,13 +1,9 @@
 /*Este archivo contiene JavaScript puro para funcionalidades independientes de React
 Se puede usar para interactuar con el DOM, validar formularios o añadir efectos.*/
 
-//Función para manejar el clic y la expansión
-export const handleDishExpansion = (dishName, expandedDish, setExpandedDish) => {
-  setExpandedDish(expandedDish === dishName ? null : dishName);
-};
-
+//Define dos arreglos de objetos, cada uno con name, image y description.
 //Lista de platillos Salvadoreños (constantes)
-export const salvadoranDishes = [
+export const platosSalvadoreños = [
   {
     name: 'Pupusas',
     image: '/imagenes/pupusas.jpg',
@@ -26,7 +22,7 @@ export const salvadoranDishes = [
 ];
 
 //Lista de los platillos Mexicanos (constantes)
-export const mexicanDishes = [
+export const platosMexicanos = [
   {
     name: 'Tacos al Pastor',
     image: '/imagenes/tacos.jpg',
